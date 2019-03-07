@@ -19,9 +19,10 @@ public class UserServices implements UserService{
         //从redis  取 对象
         Object userList = jedisUtil.getObject("userList");
         if(userList!=null){//如果存在，直接返回
-            System.out.println("从redis缓存中取！！！！！");
+            System.out.println("从red`is缓存中取！！！！！");
             return (List<Map>)userList;
         }else{//不存在 ，从数据库中获取，放入缓存
+            System.out.println("从数据库取。。。。。。。。。");
             System.out.println("从数据库取。。。。。。。。。");
             List<Map> userList1 = userDao.get();
             jedisUtil.putObject("userList",userList1);
