@@ -23,7 +23,7 @@ public class UserServices implements UserService{
             return (List<Map>)userList;
         }else{//不存在 ，从数据库中获取，放入缓存
             System.out.println("从数据库取。。。。。。。。。");
-            System.out.println("Hello World。。。。。。。。。");
+            System.out.println("Hello World name。。。。。。。。。");
             List<Map> userList1 = userDao.get();
             jedisUtil.putObject("userList",userList1);
             return userList1;
