@@ -12,7 +12,6 @@ import java.util.Map;
 
 @Controller
 public class UserAction {
-    //7
     @Autowired
     private UserService ser;
     @RequestMapping("get")
