@@ -16,6 +16,7 @@ public class UserAction {
     private UserService ser;
     @RequestMapping("get")
     @ResponseBody
+    //asdasfa
     public List<Map> get(){
         return ser.get();
     }
